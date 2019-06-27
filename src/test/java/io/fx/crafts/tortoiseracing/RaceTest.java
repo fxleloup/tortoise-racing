@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -17,8 +18,8 @@ public class RaceTest {
                 arguments( speedA(8),   speedB(10),  leadA(0),  expectedResultInHourMinutesSeconds(0, 0, 0)),
                 arguments( speedA(1),   speedB(1),   leadA(2),  expectedResultNull()),
                 arguments( speedA(1),   speedB(0),   leadA(2),  expectedResultNull()),
-                arguments( speedA(220), speedB(260), leadA(20), expectedResultInHourMinutesSeconds(0, 32, 18)),
-                arguments( speedA(25),  speedB(28),  leadA(11), expectedResultInHourMinutesSeconds(3, 21, 49))
+                arguments( speedA(720), speedB(850), leadA(70), expectedResultInHourMinutesSeconds(0, 32, 18)),
+                arguments( speedA(80),  speedB(91),  leadA(37), expectedResultInHourMinutesSeconds(3, 21, 49))
         );
     }
 
@@ -28,6 +29,7 @@ public class RaceTest {
         // when
         int[] actualResultInHourMinutesSeconds = Race.computeCrossTime(speedA, speedB, leadA);
         // then
+        System.out.println("actual=" + Arrays.toString(actualResultInHourMinutesSeconds) + ", expected=" + Arrays.toString(expectedResult));
         assertArrayEquals(expectedResult, actualResultInHourMinutesSeconds);
     }
 

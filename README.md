@@ -34,15 +34,15 @@ Si vA >= vB alors le système retournera null.
 
 ##### 1. 
 <pre>
-Etant donné que la vitesse de la tortue A est de 220 m/h
-Etant donné que la vitesse de la tortue B est de 260 m/h
-Etant donné que l' avance de la tortue B est de 20 m
+Etant donné que la vitesse de la tortue A est de 219 m/h
+Etant donné que la vitesse de la tortue B est de 259 m/h
+Etant donné que l' avance de la tortue B est de 21 m
 Quand le système exécute la course
 Alors le système affiche un temps [heure, minute, seconde] égal à [0, 32, 18]
 </pre>
 ##### 2. 
 <pre>
-Etant donné que la vitesse de la tortue A est de 25 m/h
+Etant donné que la vitesse de la tortue A est de 24 m/h
 Etant donné que la vitesse de la tortue B est de 28 m/h
 Etant donné que l' avance de la tortue B est de 11 m
 Quand le système exécute la course
