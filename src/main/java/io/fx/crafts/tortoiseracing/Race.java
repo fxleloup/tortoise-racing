@@ -9,16 +9,16 @@ public class Race {
             return null;
         }
 
-        // speedABySeconds = speedA / 3600;
-        // speedBBySeconds = speedB / 3600;
-        // speedABySeconds * solutionInSeconds + leadA = speedBBySeconds * solutionInSeconds
+        // speedAInSeconds = speedA / 3600;
+        // speedBInSeconds = speedB / 3600;
+        // speedAInSeconds * crossTimeInSeconds + leadA = speedBInSeconds * crossTimeInSeconds
 
-        int solutionInSeconds = (leadA * 3600) / (speedB - speedA);
+        int crossTimeInSeconds = (leadA * 3600) / (speedB - speedA);
 
-        return solutionInHoursMinutesSeconds(solutionInSeconds);
+        return crossTimeInHoursMinutesSeconds(crossTimeInSeconds);
     }
 
-    private static int[] solutionInHoursMinutesSeconds(int solutionInSeconds) {
+    public static int[] crossTimeInHoursMinutesSeconds(int solutionInSeconds) {
         int secondsPart = solutionInSeconds % 60;
         int solutionInMinutes = solutionInSeconds / 60;
         int minutesPart = solutionInMinutes % 60;
